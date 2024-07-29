@@ -1,1 +1,4 @@
-const app = require('http')
+const os = require('os');
+
+// checking the number of cpus in the system
+// console.log(os.cpus().length);
