@@ -1,0 +1,19 @@
+{
+  "name": "basicnode",
+  "version": "1.0.0",
+  "description": "basics of node js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/rajib010/Learning-NodeJs.git"
+  },
+  "author": "rajib",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajib010/Learning-NodeJs/issues"
+  },
+  "homepage": "https://github.com/rajib010/Learning-NodeJs#readme"
+}
