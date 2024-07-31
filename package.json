@@ -4,7 +4,7 @@
   "description": "basics of node js",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon node ./handlingUrls/index.js"
+    "start": "nodemon node ./customMiddleware/index.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/rajib010/Learning-NodeJs#readme",
   "dependencies": {
-    "nodemon": "^3.1.4",
-    "url": "^0.11.4"
+    "express": "^4.19.2",
+    "nodemon": "^3.1.4"
   }
 }
+
