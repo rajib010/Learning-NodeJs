@@ -4,7 +4,7 @@
   "description": "basics of node js",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon node ./customMiddleware/index.js"
+    "start": "nodemon node ./customUrlsShortner/index.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,10 @@
   "homepage": "https://github.com/rajib010/Learning-NodeJs#readme",
   "dependencies": {
     "express": "^4.19.2",
-    "nodemon": "^3.1.4"
+    "jsonparser": "^1.0.1",
+    "mongoose": "^8.5.2",
+    "nanoid": "^5.0.7",
+    "nodemon": "^3.1.4",
+    "shortid": "^2.2.16"
   }
 }
-
