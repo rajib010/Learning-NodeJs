@@ -1,11 +1,13 @@
 const express = require("express");
-const shortId = require("shortid");
+const shortid = require("shortid");
 const URL = require("./userSchema.js")
 
+
 const handleUrlCreation = async (req, res) => {
+    const shortId = shortid();
+    console.log(shortId);
     const body = req.body;
     if (!body.url) return res.status(400).json({ error: "Url is required" });
-    const shortId = shortId();
     await URL.create({
         shortId,
         redirectedUrl: body.url,
@@ -18,17 +20,17 @@ const handleUrlCreation = async (req, res) => {
 
 const handleUrlRedirection = async (req, res) => {
     const shortId = req.params.shortId
-   const entry= await URL.findOneAndUpdate({ shortId },
+    const entry = await URL.findOneAndUpdate({ shortId },
         {
             $push: {
                 visitCount: {
-                   timestamp: Date.now()
+                    timestamp: Date.now()
                 }
             },
         }
     );
 
-    res.redirect(entry.redirectedUrl)
+   return res.redirect(entry.redirectedUrl);
 }
 
 module.exports = { handleUrlCreation, handleUrlRedirection };

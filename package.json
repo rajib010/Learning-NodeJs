@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/rajib010/Learning-NodeJs#readme",
   "dependencies": {
+    "ejs": "^3.1.10",
     "express": "^4.19.2",
     "jsonparser": "^1.0.1",
     "mongoose": "^8.5.2",
