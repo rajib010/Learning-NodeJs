@@ -14,7 +14,8 @@ const handleUrlCreation = async (req, res) => {
         visitCount: []
     });
 
-    return res.json({ id: shortId })
+    const allUrl = await URL.find({});
+    return res.render("home", { id: shortId, urls:allUrl });
 }
 
 
@@ -30,7 +31,7 @@ const handleUrlRedirection = async (req, res) => {
         }
     );
 
-   return res.redirect(entry.redirectedUrl);
+    return res.redirect(entry.redirectedUrl);
 }
 
 module.exports = { handleUrlCreation, handleUrlRedirection };
